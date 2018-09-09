@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#eaeaea"
     android:orientation="vertical"
-    tools:context="com.alfianyusufabdullah.alquranq.ui.ListAyat.ListAyatActivity">
+    tools:context="com.alfianyusufabdullah.alquranq.presentation.listayat.ListAyatActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

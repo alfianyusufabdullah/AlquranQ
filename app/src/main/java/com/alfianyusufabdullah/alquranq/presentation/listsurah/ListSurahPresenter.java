@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.ListSurah;
+package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import com.alfianyusufabdullah.alquranq.base.BasePresenter;
 import com.alfianyusufabdullah.alquranq.database.DatabaseContract;
 import com.alfianyusufabdullah.alquranq.database.DatabaseHelper;
-import com.alfianyusufabdullah.alquranq.model.ModelSurah;
 import com.alfianyusufabdullah.alquranq.model.Surah;
 
 import java.util.ArrayList;

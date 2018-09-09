@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.Splashscreen;
+package com.alfianyusufabdullah.alquranq.presentation.splashscreen;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;

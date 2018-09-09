@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.ListSurah;
+package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

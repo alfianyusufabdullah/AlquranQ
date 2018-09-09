@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.ListSurah;
+package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 
 import com.alfianyusufabdullah.alquranq.base.BaseView;
 import com.alfianyusufabdullah.alquranq.model.Surah;

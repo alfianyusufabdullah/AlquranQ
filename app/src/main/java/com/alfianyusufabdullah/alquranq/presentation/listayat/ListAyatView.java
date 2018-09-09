@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.ListAyat;
+package com.alfianyusufabdullah.alquranq.presentation.listayat;
 
 import com.alfianyusufabdullah.alquranq.base.BaseView;
 import com.alfianyusufabdullah.alquranq.model.Ayat;

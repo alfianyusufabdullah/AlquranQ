@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.ListSurah;
+package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import com.alfianyusufabdullah.alquranq.R;
 import com.alfianyusufabdullah.alquranq.base.BaseActivity;
 import com.alfianyusufabdullah.alquranq.model.Surah;
-import com.alfianyusufabdullah.alquranq.ui.ListAyat.ListAyatActivity;
+import com.alfianyusufabdullah.alquranq.presentation.listayat.ListAyatActivity;
 
 import java.util.ArrayList;
 

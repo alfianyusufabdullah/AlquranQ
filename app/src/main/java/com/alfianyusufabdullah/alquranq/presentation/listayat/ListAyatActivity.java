@@ -1,8 +1,6 @@
-package com.alfianyusufabdullah.alquranq.ui.ListAyat;
+package com.alfianyusufabdullah.alquranq.presentation.listayat;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;

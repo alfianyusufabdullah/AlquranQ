@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#eaeaea"
     android:orientation="vertical"
-    tools:context="com.alfianyusufabdullah.alquranq.ui.ListSurah.ListSurahActivity">
+    tools:context="com.alfianyusufabdullah.alquranq.presentation.listsurah.ListSurahActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

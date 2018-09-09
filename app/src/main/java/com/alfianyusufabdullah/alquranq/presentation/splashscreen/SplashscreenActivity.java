@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.Splashscreen;
+package com.alfianyusufabdullah.alquranq.presentation.splashscreen;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.ProgressBar;
 
 import com.alfianyusufabdullah.alquranq.base.BaseActivity;
 import com.alfianyusufabdullah.alquranq.R;
-import com.alfianyusufabdullah.alquranq.ui.ListSurah.ListSurahActivity;
+import com.alfianyusufabdullah.alquranq.presentation.listsurah.ListSurahActivity;
 import com.alfianyusufabdullah.alquranq.utils.PreferenceApp;
 
 import butterknife.BindView;

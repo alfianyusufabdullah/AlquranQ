@@ -1,4 +1,4 @@
-package com.alfianyusufabdullah.alquranq.ui.ListAyat;
+package com.alfianyusufabdullah.alquranq.presentation.listayat;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.ListSurah.ListSurahActivity"
+            android:name=".presentation.listsurah.ListSurahActivity"
             tools:ignore="InnerclassSeparator" />
         <activity
-            android:name=".ui.Splashscreen.SplashscreenActivity"
+            android:name=".presentation.splashscreen.SplashscreenActivity"
             tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.ListAyat.ListAyatActivity"></activity>
+        <activity android:name=".presentation.listayat.ListAyatActivity"></activity>
     </application>
 
 </manifest>
