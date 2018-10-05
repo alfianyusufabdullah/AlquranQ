@@ -13,7 +13,7 @@ import com.alfianyusufabdullah.alquranq.presentation.listsurah.ListSurahActivity
 import com.alfianyusufabdullah.alquranq.utils.PreferenceApp;
 
 import butterknife.BindView;
-
+// just add this for event https://hacktoberfest.digitalocean.com/details
 public class SplashscreenActivity extends BaseActivity<SplashscreenPresenter> implements SplashscreenView {
 
     @BindView(R.id.layoutLoadingInfo)
