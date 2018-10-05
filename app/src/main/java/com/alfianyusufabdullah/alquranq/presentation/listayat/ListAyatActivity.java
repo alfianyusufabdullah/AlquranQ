@@ -13,7 +13,7 @@ import com.alfianyusufabdullah.alquranq.model.Ayat;
 import java.util.ArrayList;
 
 import butterknife.BindView;
-
+//https://hacktoberfest.digitalocean.com/details
 public class ListAyatActivity extends BaseActivity<ListAyatPresenter> implements ListAyatView {
 
     @BindView(R.id.toolbar)
