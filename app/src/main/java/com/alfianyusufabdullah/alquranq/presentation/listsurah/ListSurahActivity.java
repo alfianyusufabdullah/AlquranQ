@@ -21,7 +21,8 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 
-public class ListSurahActivity extends BaseActivity<ListSurahPresenter> implements ListSurahView, ListSurahAdapter.OnSurahItemClick {
+public class ListSurahActivity extends BaseActivity<ListSurahPresenter>
+        implements ListSurahView, ListSurahAdapter.OnSurahItemClick {
 
     @BindView(R.id.listSurah)
     RecyclerView recyclerView;

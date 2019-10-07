@@ -1,6 +1,7 @@
 package com.alfianyusufabdullah.alquranq.base;
 
 import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alfianyusufabdullah.alquranq.database.DatabaseContract;

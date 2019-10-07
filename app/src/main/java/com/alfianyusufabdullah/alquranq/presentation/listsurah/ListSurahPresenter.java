@@ -25,7 +25,15 @@ class ListSurahPresenter extends BasePresenter<ListSurahView> {
 
     void loadSurah(String loadTerjemahan) {
         SQLiteDatabase database = DatabaseHelper.getDatabase();
-        Cursor cursor = database.query(DatabaseContract.TableSurah.TABLE_SURAH, null, null, null, null, null, null);
+        Cursor cursor = database.query(
+                DatabaseContract.TableSurah.TABLE_SURAH,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
 
         ArrayList<Surah> data = new ArrayList<>();
         if (cursor.moveToFirst()) {

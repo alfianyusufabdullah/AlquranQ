@@ -14,7 +14,8 @@ import com.alfianyusufabdullah.alquranq.utils.PreferenceApp;
 
 import butterknife.BindView;
 
-public class SplashscreenActivity extends BaseActivity<SplashscreenPresenter> implements SplashscreenView {
+public class SplashscreenActivity extends BaseActivity<SplashscreenPresenter>
+        implements SplashscreenView {
 
     @BindView(R.id.layoutLoadingInfo)
     LinearLayout mLayoutLoadingInfo;

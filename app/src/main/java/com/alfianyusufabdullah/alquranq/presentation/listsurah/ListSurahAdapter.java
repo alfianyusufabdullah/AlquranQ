@@ -1,5 +1,6 @@
 package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,9 +33,14 @@ class ListSurahAdapter extends RecyclerView.Adapter<ListSurahAdapter.SurahHolder
         this.click = click;
     }
 
+    @NonNull
     @Override
     public SurahHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_list_surah, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(
+                R.layout.row_list_surah,
+                parent,
+                false
+        );
         return new SurahHolder(view);
     }
 
