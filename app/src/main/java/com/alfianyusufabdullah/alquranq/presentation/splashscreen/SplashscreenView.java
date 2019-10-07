@@ -8,6 +8,7 @@ package com.alfianyusufabdullah.alquranq.presentation.splashscreen;
  */
 
 interface SplashscreenView {
+
     void onPrepare();
 
     void onProgress(int progress);

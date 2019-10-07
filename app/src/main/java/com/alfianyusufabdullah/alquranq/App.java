@@ -30,7 +30,7 @@ public class App extends Application {
         PreferenceApp.initPreferences(this);
     }
 
-    public static BufferedReader getRawResources(int res){
+    public static BufferedReader getRawResources(int res) {
         InputStream streamReader = resources.openRawResource(res);
         return new BufferedReader(new InputStreamReader(streamReader));
     }
