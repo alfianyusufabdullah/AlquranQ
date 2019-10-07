@@ -7,7 +7,7 @@ package com.alfianyusufabdullah.alquranq.model;
  * @github @alfianyusufabdullah
  */
 
-public class ModelSurah  {
+public class ModelSurah {
 
     private String surah;
     private String ayat;
@@ -16,14 +16,23 @@ public class ModelSurah  {
     private String terjemahanEnglish;
     private String jumlahAyat;
 
-    public ModelSurah(String surah, String ayat, String terjemahan, String jumlahAyat) {
+    public ModelSurah(String surah,
+                      String ayat,
+                      String terjemahan,
+                      String jumlahAyat
+    ) {
         this.surah = surah;
         this.ayat = ayat;
         this.terjemahan = terjemahan;
         this.jumlahAyat = jumlahAyat;
     }
 
-    public ModelSurah(String surah, String ayat, String terjemahanIndonesia, String terjemahanEnglish, String jumlahAyat) {
+    public ModelSurah(String surah,
+                      String ayat,
+                      String terjemahanIndonesia,
+                      String terjemahanEnglish,
+                      String jumlahAyat
+    ) {
         this.surah = surah;
         this.ayat = ayat;
         this.terjemahanIndonesia = terjemahanIndonesia;

@@ -23,9 +23,17 @@ class ListAyatPresenter extends BasePresenter<ListAyatView> {
         super.attach(view);
     }
 
-    void loadAyat(String loadSurah , String loadTerjemahan) {
+    void loadAyat(String loadSurah, String loadTerjemahan) {
         SQLiteDatabase database = DatabaseHelper.getDatabase();
-        Cursor cursor = database.query(DatabaseContract.TableAyat.TABLE_AYAT, null, DatabaseContract.TableAyat.SURAH + " LIKE '" + loadSurah + "'",null, null, null, null);
+        Cursor cursor = database.query(
+                DatabaseContract.TableAyat.TABLE_AYAT,
+                null,
+                DatabaseContract.TableAyat.SURAH + " LIKE '" + loadSurah + "'",
+                null,
+                null,
+                null,
+                null
+        );
 
         ArrayList<Ayat> data = new ArrayList<>();
         if (cursor.moveToFirst()) {
@@ -35,7 +43,7 @@ class ListAyatPresenter extends BasePresenter<ListAyatView> {
                 String arab = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.TableAyat.ARAB));
                 String terjemahan = cursor.getString(cursor.getColumnIndexOrThrow(loadTerjemahan));
 
-                data.add(new Ayat(surah , ayat , arab , terjemahan));
+                data.add(new Ayat(surah, ayat, arab, terjemahan));
             } while (cursor.moveToNext());
         }
         mView.onLoad(data);

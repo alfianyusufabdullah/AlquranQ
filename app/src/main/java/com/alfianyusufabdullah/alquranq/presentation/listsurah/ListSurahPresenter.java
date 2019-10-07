@@ -43,7 +43,7 @@ class ListSurahPresenter extends BasePresenter<ListSurahView> {
                 String terjemahan = cursor.getString(cursor.getColumnIndexOrThrow(loadTerjemahan));
                 String jumlahAyat = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseContract.TableSurah.JUMLAH_AYAT));
 
-                data.add(new Surah(surah , ayat , terjemahan , jumlahAyat));
+                data.add(new Surah(surah, ayat, terjemahan, jumlahAyat));
             } while (cursor.moveToNext());
         }
         mView.onLoad(data);

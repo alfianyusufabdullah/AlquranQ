@@ -8,7 +8,11 @@ package com.alfianyusufabdullah.alquranq.model;
  */
 
 public class Surah extends ModelSurah {
-    public Surah(String surah, String ayat, String terjemahan, String jumlahAyat) {
+    public Surah(String surah,
+                 String ayat,
+                 String terjemahan,
+                 String jumlahAyat
+    ) {
         super(surah, ayat, terjemahan, jumlahAyat);
     }
 

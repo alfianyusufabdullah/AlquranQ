@@ -34,5 +34,4 @@ public class App extends Application {
         InputStream streamReader = resources.openRawResource(res);
         return new BufferedReader(new InputStreamReader(streamReader));
     }
-
 }

@@ -26,7 +26,13 @@ public class RawParser {
         String rawAyat;
         while ((rawAyat = reader.readLine()) != null) {
             String[] rawAyats = rawAyat.split("//");
-            ayatList.add(new ModelAyat(rawAyats[0], rawAyats[1], rawAyats[2], rawAyats[3], rawAyats[4]));
+            ayatList.add(new ModelAyat(
+                    rawAyats[0],
+                    rawAyats[1],
+                    rawAyats[2],
+                    rawAyats[3],
+                    rawAyats[4]
+            ));
         }
 
         return ayatList;
@@ -40,10 +46,16 @@ public class RawParser {
         while ((rawSurah = reader.readLine()) != null) {
             String[] rawSurahs = rawSurah.split("//");
 
-            if (rawSurahs.length < 5){
+            if (rawSurahs.length < 5) {
                 continue;
             }
-            surahList.add(new ModelSurah(rawSurahs[0], rawSurahs[1], rawSurahs[2], rawSurahs[3], rawSurahs[4]));
+            surahList.add(new ModelSurah(
+                    rawSurahs[0],
+                    rawSurahs[1],
+                    rawSurahs[2],
+                    rawSurahs[3],
+                    rawSurahs[4]
+            ));
         }
 
         return surahList;

@@ -1,9 +1,11 @@
 package com.alfianyusufabdullah.alquranq.presentation.listayat;
 
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.MenuItem;
 
 import com.alfianyusufabdullah.alquranq.R;

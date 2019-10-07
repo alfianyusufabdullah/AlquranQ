@@ -2,6 +2,7 @@ package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +55,7 @@ class ListSurahAdapter extends RecyclerView.Adapter<ListSurahAdapter.SurahHolder
         return surahList.size();
     }
 
-    void refresh(ArrayList<Surah> fill){
+    void refresh(ArrayList<Surah> fill) {
         surahList = new ArrayList<>();
         surahList.addAll(fill);
 
