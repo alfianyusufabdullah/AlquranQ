@@ -1,15 +1,18 @@
 package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.alfianyusufabdullah.alquranq.R;
 import com.alfianyusufabdullah.alquranq.model.Surah;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindViews;
@@ -22,13 +25,12 @@ import butterknife.ButterKnife;
  * @github @alfianyusufabdullah
  */
 
-class ListSurahAdapter extends RecyclerView.Adapter<ListSurahAdapter.SurahHolder> {
+class ListSurahAdapter extends ListAdapter<Surah, ListSurahAdapter.SurahHolder> {
 
-    private ArrayList<Surah> surahList;
     private OnSurahItemClick click;
 
-    ListSurahAdapter(ArrayList<Surah> surahList, OnSurahItemClick click) {
-        this.surahList = surahList;
+    ListSurahAdapter(@NonNull DiffUtil.ItemCallback<Surah> diffCallback, OnSurahItemClick click) {
+        super(diffCallback);
         this.click = click;
     }
 
@@ -40,19 +42,7 @@ class ListSurahAdapter extends RecyclerView.Adapter<ListSurahAdapter.SurahHolder
 
     @Override
     public void onBindViewHolder(SurahHolder holder, int position) {
-        holder.setContent(surahList.get(position), click);
-    }
-
-    @Override
-    public int getItemCount() {
-        return surahList.size();
-    }
-
-    void refresh(ArrayList<Surah> fill){
-        surahList = new ArrayList<>();
-        surahList.addAll(fill);
-
-        notifyDataSetChanged();
+        holder.setContent(getItem(position), click);
     }
 
     class SurahHolder extends RecyclerView.ViewHolder {

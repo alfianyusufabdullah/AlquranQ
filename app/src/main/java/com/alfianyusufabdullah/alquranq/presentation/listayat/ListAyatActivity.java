@@ -1,10 +1,11 @@
 package com.alfianyusufabdullah.alquranq.presentation.listayat;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
-import android.view.MenuItem;
 
 import com.alfianyusufabdullah.alquranq.R;
 import com.alfianyusufabdullah.alquranq.base.BaseActivity;
@@ -51,7 +52,7 @@ public class ListAyatActivity extends BaseActivity<ListAyatPresenter> implements
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        listAyatAdapter = new ListAyatAdapter(new ArrayList<Ayat>());
+        listAyatAdapter = new ListAyatAdapter(new AyatDiffCallback());
 
         listAyat.setHasFixedSize(true);
         listAyat.setLayoutManager(new LinearLayoutManager(this));
@@ -62,7 +63,7 @@ public class ListAyatActivity extends BaseActivity<ListAyatPresenter> implements
 
     @Override
     public void onLoad(ArrayList<Ayat> data) {
-        listAyatAdapter.refresh(data);
+        listAyatAdapter.submitList(data);
     }
 
     @Override

@@ -3,19 +3,20 @@ package com.alfianyusufabdullah.alquranq.presentation.listsurah;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
-import com.google.android.material.navigation.NavigationView;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
-import android.view.MenuItem;
 
 import com.alfianyusufabdullah.alquranq.R;
 import com.alfianyusufabdullah.alquranq.base.BaseActivity;
 import com.alfianyusufabdullah.alquranq.model.Surah;
 import com.alfianyusufabdullah.alquranq.presentation.listayat.ListAyatActivity;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -50,7 +51,7 @@ public class ListSurahActivity extends BaseActivity<ListSurahPresenter> implemen
 
         toolbar.setTitle("Alquran Q");
 
-        listSurahAdapter = new ListSurahAdapter(new ArrayList<Surah>(), this);
+        listSurahAdapter = new ListSurahAdapter(new SurahDiffCallback(), this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
@@ -87,7 +88,7 @@ public class ListSurahActivity extends BaseActivity<ListSurahPresenter> implemen
 
     @Override
     public void onLoad(ArrayList<Surah> data) {
-        listSurahAdapter.refresh(data);
+        listSurahAdapter.submitList(data);
     }
 
     @Override

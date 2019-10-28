@@ -1,15 +1,18 @@
 package com.alfianyusufabdullah.alquranq.presentation.listayat;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.alfianyusufabdullah.alquranq.R;
 import com.alfianyusufabdullah.alquranq.model.Ayat;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindViews;
@@ -22,12 +25,10 @@ import butterknife.ButterKnife;
  * @github @alfianyusufabdullah
  */
 
-class ListAyatAdapter extends RecyclerView.Adapter<ListAyatAdapter.AyatHolder> {
+class ListAyatAdapter extends ListAdapter<Ayat, ListAyatAdapter.AyatHolder> {
 
-    private ArrayList<Ayat> ayatList;
-
-    ListAyatAdapter(ArrayList<Ayat> data) {
-        this.ayatList = data;
+    ListAyatAdapter(@NonNull DiffUtil.ItemCallback<Ayat> diffCallback) {
+        super(diffCallback);
     }
 
     @Override
@@ -38,19 +39,7 @@ class ListAyatAdapter extends RecyclerView.Adapter<ListAyatAdapter.AyatHolder> {
 
     @Override
     public void onBindViewHolder(AyatHolder holder, int position) {
-        holder.setContent(ayatList.get(position));
-    }
-
-    @Override
-    public int getItemCount() {
-        return ayatList.size();
-    }
-
-    void refresh(ArrayList<Ayat> fill) {
-        ayatList = new ArrayList<>();
-        ayatList.addAll(fill);
-
-        notifyDataSetChanged();
+        holder.setContent(getItem(position));
     }
 
     class AyatHolder extends RecyclerView.ViewHolder {
